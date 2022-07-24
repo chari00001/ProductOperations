@@ -2,7 +2,7 @@
 
   <div>
     <app-header></app-header>
-    <transition name="fade" mode="out-in">
+    <transition name="fade" modpe="out-in">
       <router-view></router-view>
     </transition>
     <app-footer></app-footer>
@@ -45,9 +45,9 @@ body{
   transition: opacity 0.2s ease-out;
 }
 
-.fade-leave{
+/* .fade-leave{
   
-}
+} */
 
 .fade-leave-active{
   transition: opacity 0.2s ease-out;
