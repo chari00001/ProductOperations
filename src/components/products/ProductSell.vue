@@ -95,7 +95,7 @@ export default {
         },
         saveEnabled(){
             if(this.selectedProduct !== null
-            && this.productCount > 0){
+            && this.productCount !== 0){
                 return true;
             }
             else {
