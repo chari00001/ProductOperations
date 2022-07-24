@@ -64,7 +64,6 @@ export default {
             product: null,
             productCount: 0,
             saveButtonClicked: false,
-            saveEnabled: false
         }
     },
     methods: {
