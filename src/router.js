@@ -6,6 +6,7 @@ import ProductPurchase from "./components/products/ProductPurchase.vue";
 
 Vue.use(VueRouter);
 
+// Defining routes and redirection route
 const routes = [
     { path: "/", component: ProductList },
     { path: "/product-sell", component: ProductSell },
@@ -13,6 +14,7 @@ const routes = [
     { path: "*", redirect: "/" }
 ];
 
+// Exporting router as a new VueRouter instance
 export const router = new VueRouter({
     mode: "history",
     routes

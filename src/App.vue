@@ -2,6 +2,7 @@
 
   <div>
     <app-header></app-header>
+    <!-- Fade animation occurs on every route transition -->
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
@@ -15,15 +16,15 @@
 import HeaderVue from './components/shared/Header.vue';
 import FooterVue from './components/shared/Footer.vue';
 
-
+// Importing header and footer to be used
 export default {
   components: {
     appHeader: HeaderVue,
     appFooter: FooterVue,
 
   },
+  // Everytime main component is created, initApp and getTradeResult actions are called
   created(){
-    /******** Sends get request to firebase after component created *******/
     this.$store.dispatch("getTradeResult");
     this.$store.dispatch("initApp");
   }

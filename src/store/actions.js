@@ -1,5 +1,6 @@
 import Vue from "vue";
 
+// Action using updateTradeResult mutation and updating the database with current trade data
 export const setTradeResult = ({ state, commit }, tradeResult) => {
     commit("updateTradeResult", tradeResult);
     let tradeData = {
@@ -12,6 +13,7 @@ export const setTradeResult = ({ state, commit }, tradeResult) => {
         })
 }
 
+// Action to get trade results showed in footer
 export const getTradeResult = ({ commit }) => {
     Vue.http.get("https://productoperations-3efe0-default-rtdb.firebaseio.com/trade-result.json")
         .then(response => {
